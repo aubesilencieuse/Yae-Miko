@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reign of Serenity - Collection 2025</title>
+  <link rel="stylesheet" href="../Yae%20Miko/Style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+      <header class="container-header">
+      <a href="index.html" class="lien-logo">
+      <img src="Images/Yae-Logo-ROS.png" alt="Logo Reign Of Serenity" />
+      </a>
+      <div class="menu">
+      <a href="Index.html">Home</a> |
+      <a href="Collection.html" target="_blank">Collection</a> |
+      <a href="Gallery.html" target="_blank">Gallery</a> |
+      <a href="https://www.facebook.com/aubesilencieuse/"target="_blank">About</a>
+      </div>
+      </header>
+    </nav>
+
+<!--Hero Header-->
+  <section class="hero">
+      <img src="Images/Yae-banner-collection.png" alt="Yae Miko Hero">
+  </section>
+
+  <main class="container">  
+    <section class="Selecteur">
+        <div>
+            <p class="Selecteur-collection">Collection <b><em>2025 <br/>
+            Yae</em></b> Miko</p>
+        </div>
+
+        <div class="product-filter">
+            <button class="filter-btn active" data-type="all">All</button>
+            <button class="filter-btn" data-type="tshirt">T-shirt</button>
+            <button class="filter-btn" data-type="bas">Bas</button>
+            <button class="filter-btn" data-type="other">Others</button>
+        </div>
+    </section>
+
+    <section class="Collection">
+        <div class="Items" data-type="tshirt">
+            <img src="Images/Miko-Top-1.png" alt="Yae T-shirt" />
+            <h3>Yae Miko Theme Impression Series Patchwork Long-Sleeve T-Shirt | 48 €</h3>
+        </div>
+
+        <div class="Items" data-type="tshirt">
+            <img src="Images/Miko-Top-2.png" alt="Yae T-shirt" />
+            <h3>Yae Miko Theme Impression Series Long-Sleeve Shirt | 52 €</h3>
+        </div>
+
+        <div class="Items" data-type="tshirt">
+            <img src="Images/Miko-Top-3.png" alt="Yae T-shirt" />
+            <h3>Yae Miko Theme Impression Series High-Collar Sweatshirt | 52 €</h3>
+        </div>
+
+        <div class="Items" data-type="tshirt">
+            <img src="Images/Miko-Top-4.png" alt="Yae T-shirt" />
+            <h3>Yae Miko Theme Impression Series Gradient Long-Sleeve T-Shirt | 48 €</h3>
+        </div>
+
+        <div class="Items" data-type="bas">
+            <img src="Images/Miko-Bas-1.png" alt="Yae Pants" />
+            <h3>Yae Miko Theme Impression Series Casual Pants | 56 €</h3>
+        </div>
+
+        <div class="Items" data-type="bas">
+            <img src="Images/Miko-Bas-2.png" alt="Yae Skirt" />
+            <h3>Yae Miko Theme Impression Series Midi Skirt | 62 €</h3>
+        </div>
+
+        <div class="Items" data-type="other">
+            <img src="Images/Miko-Others-1.webp" alt="Yae Tote Bag" />
+            <h3>Yae Miko Theme Impression Series Tote Bag | 56 €</h3>
+        </div>
+
+        <div class="Items" data-type="other">
+            <img src="Images/Miko-Others-2.png" alt="Yae Umbrella" />
+            <h3>Yae Miko Theme Impression Series Compact Umbrella | 31 €</h3>
+        </div>
+
+        <div class="Items" data-type="other">
+            <img src="Images/Miko-Others-3.png" alt="Yae Bracelet" />
+            <h3>Yae Miko Theme Impression Series Bracelet | 29 €</h3>
+        </div>
+
+        <div class="Items" data-type="other">
+            <img src="Images/Miko-Others-4.png" alt="Yae Keychain" />
+            <h3>Yae Miko Theme Impression Series Metal Lanyard Keychain | 10€</h3>
+        </div>
+    </section>
+  </main>
+
+  <script>
+const buttons = document.querySelectorAll('.filter-btn');
+const products = document.querySelectorAll('.Items');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const type = button.getAttribute('data-type');
+
+    products.forEach(product => {
+      if(type === 'all' || product.getAttribute('data-type') === type) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+
+<div class="spacer"></div>
+</body>
+</html> 
